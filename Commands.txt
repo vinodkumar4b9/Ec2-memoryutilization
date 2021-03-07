@@ -1,0 +1,11 @@
+#Install cloud watch agent
+sudo yum install amazon-cloudwatch-agent
+
+#To configure cloudwatchagent wizard
+./amazon-cloudwatch-agent-config-wizard
+
+#TO check cloudwatch status
+./amazon-cloudwatch-agent-ctl -m ec2 -a status
+
+#To fetch the config changes
+./amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:config.json -s
